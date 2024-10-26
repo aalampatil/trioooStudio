@@ -59,7 +59,7 @@ body {
 
 .brand-name h4 {
     font-size: 1.5em;
-    color: #ffd93d;
+    color: #ff6b6b;
     margin-bottom: 20px;
 }
 
@@ -228,27 +228,34 @@ body {
 
 @media (max-width: 453px) {
     .mainContainer {
-        flex-direction: column;
-        padding: 2px;
+        display: flex; /* Enable flexbox */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center-align items horizontally */
+        padding: 2px; /* Padding for the container */
     }
 
-    .brand-name h1 {
-        font-size: 1em;
-    }
-
-    .brand-work h1 {
-        font-size: 1em;
-    }
-
+    .brand-name h1,
+    .brand-work h1,
     .text p {
+        font-size: 2em; /* Set font size */
+        text-align: center; /* Center-align text */
+        margin: 0; /* Remove default margins for better centering */
+    }
+
+    .brand-name h4 {
         font-size: 1em;
+        text-align: center;
     }
 
     .decorative-image {
-        margin-top: 2px;
+        margin-top: 2px; /* Margin for decorative images */
+        display: block; /* Ensure images are block elements */
+        margin-left: auto; /* Center-align image */
+        margin-right: auto; /* Center-align image */
     }
 
     .about-section {
-        padding: 2px;
+        padding: 2px; /* Padding for about section */
+        text-align: center; /* Center-align text in about section */
     }
 }
