@@ -189,33 +189,6 @@ body {
     background-color: #ffd93d;
 }
 
-.brand-name {
-    font-family: 'Courier New', Courier, monospace; /* Monospace for typing effect */
-    font-size: 36px; /* Adjust as needed */
-    position: relative; /* Position for the cursor */
-    overflow: hidden; /* Ensures the text does not overflow */
-}
-
-.cursor {
-    display: inline-block;
-    width: 10px; /* Width of the cursor */
-    background-color: black; /* Color of the cursor */
-    animation: blink 0.7s step-end infinite; /* Blinking animation */
-    position: absolute; /* Absolute positioning for cursor */
-    right: -10px; /* Position it next to the text */
-    top: 0; /* Aligns with the text */
-}
-
-@keyframes blink {
-    0%, 100% {
-        background-color: transparent;
-    }
-    50% {
-        background-color: black; /* Change to cursor color */
-    }
-}
-
-
 @keyframes float {
     0%, 100% {
         transform: translateY(0);
@@ -250,5 +223,32 @@ body {
 
     .about-section {
         padding: 20px;
+    }
+}
+
+@media (max-width: 453px) {
+    .mainContainer {
+        flex-direction: column;
+        padding: 2px;
+    }
+
+    .brand-name h1 {
+        font-size: 1em;
+    }
+
+    .brand-work h1 {
+        font-size: 1em;
+    }
+
+    .text p {
+        font-size: 1em;
+    }
+
+    .decorative-image {
+        margin-top: 2px;
+    }
+
+    .about-section {
+        padding: 2px;
     }
 }
