@@ -1,0 +1,254 @@
+   /* Basic Reset */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    /* background: linear-gradient(135deg, #ff6b6b, #ffd93d); */
+    background-image: url(https://img.freepik.com/premium-photo/group-people-holding-board-that-says-digital-marketing_1270349-80613.jpg?ga=GA1.1.1313398927.1728893368&semt=ais_hybrid);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+.mainContainer {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.content {
+    flex: 1;
+}
+
+.decorative-image {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.decorative-image img {
+    background-color: transparent;
+    width: 300px;
+    height: auto;
+    border-radius: 20px;
+    opacity: 0.9;
+}
+
+.brand-name h1 {
+    font-size: 3em;
+    color: #ff6b6b;
+    margin-bottom: 5px;
+}
+
+.brand-name h4 {
+    font-size: 1.5em;
+    color: #ffd93d;
+    margin-bottom: 20px;
+}
+
+.brand-work h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.text p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.contact-us h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.contact-us a {
+    display: inline-block;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1.1em;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+.contact-us a i {
+    margin-right: 8px;
+}
+
+.contact-us a:hover {
+    color: #0056b3;
+}
+
+/* About Section */
+.about-section {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 800px;
+    text-align: left;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.about-section h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.services-list {
+    list-style-type: square;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.services-list li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.assurance {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #ff6b6b;
+}
+
+/* Decorative Circles */
+.mainContainer::before,
+.mainContainer::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.mainContainer::before {
+    width: 120px;
+    height: 120px;
+    background-color: #ff6b6b;
+    top: -40px;
+    left: -40px;
+}
+
+.mainContainer::after {
+    width: 180px;
+    height: 180px;
+    background-color: #ffd93d;
+    bottom: -60px;
+    right: -60px;
+}
+
+/* Floating Elements */
+.floating-element {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #ff6b6b;
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: float 6s ease-in-out infinite;
+}
+
+.floating-element-1 {
+    top: 10%;
+    right: 10%;
+}
+
+.floating-element-2 {
+    bottom: 15%;
+    left: 5%;
+    background-color: #ffd93d;
+}
+
+.brand-name {
+    font-family: 'Courier New', Courier, monospace; /* Monospace for typing effect */
+    font-size: 36px; /* Adjust as needed */
+    position: relative; /* Position for the cursor */
+    overflow: hidden; /* Ensures the text does not overflow */
+}
+
+.cursor {
+    display: inline-block;
+    width: 10px; /* Width of the cursor */
+    background-color: black; /* Color of the cursor */
+    animation: blink 0.7s step-end infinite; /* Blinking animation */
+    position: absolute; /* Absolute positioning for cursor */
+    right: -10px; /* Position it next to the text */
+    top: 0; /* Aligns with the text */
+}
+
+@keyframes blink {
+    0%, 100% {
+        background-color: transparent;
+    }
+    50% {
+        background-color: black; /* Change to cursor color */
+    }
+}
+
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .mainContainer {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .brand-name h1 {
+        font-size: 2.5em;
+    }
+
+    .brand-work h1 {
+        font-size: 2em;
+    }
+
+    .text p {
+        font-size: 1em;
+    }
+
+    .decorative-image {
+        margin-top: 20px;
+    }
+
+    .about-section {
+        padding: 20px;
+    }
+}
