@@ -590,131 +590,212 @@ body {
 
 /* resonsive */
 
-
-/* Responsive Media Queries */
-@media (max-width: 1024px) {
-    /* Tablet View */
-    .mainContainer, .about, .maindiv, .serviceCards, .contactDetails {
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    /* Header Styles */
+/* Responsive Styles for Devices up to 600px */
+@media (max-width: 600px) {
+    /* Header */
     header {
-        flex-direction: column;
-        padding: 20px 10px;
-    }
-
-    .navbar nav a {
-        margin-right: 20px;
-        padding: 8px 12px;
-    }
-
-    /* Service Cards */
-    .serviceCards > div {
-        max-width: 80%;
-        margin: 10px auto;
-    }
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-    /* Mobile View */
-    header {
-        flex-direction: column;
-    }
-
-    .logo img {
-        width: 80px;
+        padding: 8px 15px; /* Less padding */
+        flex-direction: column; /* Stack logo and navbar */
     }
 
     .navbar nav {
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: column; /* Stack navigation links */
     }
 
-    /* Adjust Main Content */
+    .navbar nav a {
+        font-size: 0.9em;
+        margin: 5px 0; /* Adjust spacing */
+        padding: 8px 10px;
+    }
+
+    /* Main Container */
     .mainContainer {
-        flex-direction: column;
-        padding: 20px 10px;
+        flex-direction: column; /* Stack items vertically */
+        padding: 20px; /* Reduce padding */
+    }
+
+    /* Logo */
+    .logo {
+        max-width: 250px; /* Smaller max width */
     }
 
     /* About Section */
+    #about {
+        padding: 30px 15px;
+    }
+
     .about {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: column; /* Stack content */
+        text-align: center; /* Center text */
     }
 
     .about .man {
-        width: 100%;
+        width: 100%; /* Make image responsive */
         max-width: 300px;
-        margin: 20px auto;
+        margin-bottom: 20px;
+    }
+
+    .about h1 {
+        font-size: 2.5em; /* Adjust font size */
+        margin-bottom: 20px;
+    }
+
+    .about p {
+        font-size: 1em; /* Slightly smaller font */
+    }
+
+    /* Third Section */
+    .maindiv {
+        flex-direction: column; /* Stack content vertically */
+        gap: 40px; /* Smaller gap */
+    }
+
+    .meeting-1, .meeting-2 {
+        width: 100%; /* Full width */
+        max-width: 300px; /* Limit max width */
     }
 
     /* Service Section */
-    #serviceExtended .serviceCards {
-        flex-direction: column;
-        gap: 10px;
+    #service {
+        padding: 80px 30px; /* Reduce padding */
+    }
+
+    .deskImageCard {
+        width: 90%; /* Make the card more flexible */
+        height: auto; /* Adjust height */
+        padding: 10px 5px; /* Reduce padding */
+    }
+
+    .deskImageCard > img {
+        height: auto; /* Maintain aspect ratio */
+        width: 100%; /* Full width */
     }
 
     /* Contact Section */
     #contact {
-        padding: 40px 10px;
+        padding: 50px 15px;
     }
 
     .contactDetails {
-        max-width: 90%;
-        margin: 0 auto;
-        padding: 20px;
-    }
-
-    /* Contact Icons */
-    .contactIcon {
+        padding: 20px; /* Less padding */
         width: 100%;
-        max-width: none;
-        font-size: 0.9em;
+        max-width: 400px;
     }
 
     /* Footer */
     #footer {
-        flex-direction: column;
-        padding: 20px;
+        flex-direction: column; /* Stack content */
+        text-align: center;
     }
 }
 
-/* Smaller Mobile Styles */
-@media (max-width: 480px) {
+/* Responsive Styles for Devices up to 400px */
+@media (max-width: 400px) {
     /* Header */
+    header {
+        padding: 5px 10px; /* Less padding */
+        text-align: center;
+    }
+
     .navbar nav a {
-        font-size: 0.8em;
-        padding: 8px 10px;
+        font-size: 0.8em; /* Smaller font */
+        padding: 6px 8px; /* Less padding */
     }
 
-    /* Adjust Logo */
+    /* Logo */
     .logo img {
-        width: 60px;
+        width: 40px; /* Smaller logo */
     }
 
-    /* Text Styles */
+    /* About Section */
     .about h1 {
-        font-size: 2em;
+        font-size: 2em; /* Smaller heading */
     }
 
     .about p {
-        font-size: 0.9em;
+        font-size: 0.9em; /* Smaller paragraph text */
+    }
+
+    /* Third Section */
+    .maindiv {
+        gap: 20px; /* Smaller gap */
+    }
+
+    .vision-mission .box {
+        padding: 15px; /* Less padding */
+    }
+
+    /* Service Section */
+    #service {
+        padding: 60px 15px; /* Reduce padding */
+    }
+
+    .serviceCards > div {
+        max-width: 95%; /* Make cards flexible */
     }
 
     /* Contact Section */
     #contact h1 {
-        font-size: 2em;
+        font-size: 2em; /* Smaller heading */
     }
 
     .contactIcon {
+        font-size: 0.9em; /* Reduce font size */
+    }
+
+    /* Footer */
+    .footerBottom p {
+        font-size: 0.8em; /* Smaller font */
+    }
+}
+
+/* Additional Responsive Improvements */
+@media (max-width: 353px) {
+    /* Navbar */
+    .navbar nav a {
+        font-size: 0.7em;
+        padding: 5px 7px;
+    }
+
+    /* Main Container */
+    .mainContainer {
+        padding: 10px; /* Reduce padding */
+    }
+
+    /* About Section */
+    .about h1 {
+        font-size: 1.8em;
+    }
+
+    .about p {
         font-size: 0.8em;
     }
 
     /* Service Cards */
     .serviceCards > div {
-        max-width: 95%;
+        max-width: 100%;
+    }
+
+    /* Contact Section */
+    .contactDetails {
+        max-width: 100%;
     }
 }
+
+/* Global Responsive Adjustments */
+body {
+    font-size: 16px; /* Base font size */
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+}
+
+
+
+
